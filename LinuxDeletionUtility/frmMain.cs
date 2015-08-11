@@ -13,15 +13,16 @@ public partial class frmMain: Gtk.Window
 		Application.Quit ();
 		a.RetVal = true;
 	}
+
 	protected void menuAbout_Click (object sender, EventArgs e)
 	{
-		// About the Author.
+		// ABOUT THE AUTHOR DIALOG
 		AboutDialog about = new AboutDialog();
 		about.ProgramName = "Linux Deletion Utility";
 		about.Version = "0.1";
-		about.Copyright = "© William Willis Whinn";
-		about.Comments = "This is a simple application to delete unnecessary files.";
-		about.Website = @"https://github.com/ultraviolet-1986";
+		about.Copyright = "(c) William Willis Whinn";
+		about.Comments = "This is a simple application to delete unnecessary files inside a user's Home folder.";
+		about.Website = @"https://github.com/ultraviolet-1986/LinuxDeletionUtility";
 		about.Run();
 		about.Destroy();
 	}

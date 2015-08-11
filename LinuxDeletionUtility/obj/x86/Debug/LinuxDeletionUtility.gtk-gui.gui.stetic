@@ -8,7 +8,7 @@
     <widget-library name="glade-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <widget-library name="../bin/Debug/LinuxDeletionUtility.exe" internal="true" />
   </import>
-  <widget class="Gtk.Window" id="frmMain" design-size="400 300">
+  <widget class="Gtk.Window" id="frmMain" design-size="566 429">
     <action-group name="Default">
       <action id="HelpAction">
         <property name="Type">Action</property>
@@ -25,10 +25,11 @@
     </action-group>
     <property name="MemberName" />
     <property name="Title" translatable="yes">Linux Deletion Utility</property>
+    <property name="Icon">stock:gtk-execute Menu</property>
     <property name="WindowPosition">CenterOnParent</property>
     <property name="AllowShrink">True</property>
-    <property name="DefaultWidth">400</property>
-    <property name="DefaultHeight">300</property>
+    <property name="DefaultWidth">600</property>
+    <property name="DefaultHeight">400</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
       <widget class="Gtk.VBox" id="vbox1">
@@ -51,20 +52,61 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.Notebook" id="noteMain">
+          <widget class="Gtk.HBox" id="hbox2">
             <property name="MemberName" />
-            <property name="CanFocus">True</property>
-            <property name="CurrentPage">0</property>
+            <property name="Spacing">6</property>
             <child>
-              <placeholder />
-            </child>
-            <child>
-              <widget class="Gtk.Label" id="label1">
+              <widget class="Gtk.Notebook" id="noteMain">
                 <property name="MemberName" />
-                <property name="LabelProp" translatable="yes">page1</property>
+                <property name="CanFocus">True</property>
+                <property name="CurrentPage">0</property>
+                <child>
+                  <placeholder />
+                </child>
+                <child>
+                  <widget class="Gtk.Label" id="lblPageHome">
+                    <property name="MemberName" />
+                    <property name="LabelProp" translatable="yes">Home Folder</property>
+                  </widget>
+                  <packing>
+                    <property name="type">tab</property>
+                  </packing>
+                </child>
+                <child>
+                  <placeholder />
+                </child>
+                <child>
+                  <widget class="Gtk.Label" id="lblPageApplications">
+                    <property name="MemberName" />
+                    <property name="LabelProp" translatable="yes">Applications</property>
+                  </widget>
+                  <packing>
+                    <property name="type">tab</property>
+                  </packing>
+                </child>
               </widget>
               <packing>
-                <property name="type">tab</property>
+                <property name="Position">0</property>
+                <property name="AutoSize">True</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="Gtk.ScrolledWindow" id="GtkScrolledWindow">
+                <property name="MemberName" />
+                <property name="ShadowType">In</property>
+                <child>
+                  <widget class="Gtk.TextView" id="txtConsole">
+                    <property name="MemberName" />
+                    <property name="CanFocus">True</property>
+                    <property name="ShowScrollbars">True</property>
+                    <property name="Text" translatable="yes" />
+                    <property name="WrapMode">Word</property>
+                  </widget>
+                </child>
+              </widget>
+              <packing>
+                <property name="Position">1</property>
+                <property name="AutoSize">True</property>
               </packing>
             </child>
           </widget>
@@ -78,11 +120,11 @@
             <property name="MemberName" />
             <property name="Spacing">6</property>
             <child>
-              <widget class="Gtk.Button" id="button1">
+              <widget class="Gtk.Button" id="btnClean">
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
-                <property name="Label" translatable="yes">GtkButton</property>
+                <property name="Label" translatable="yes">_Start Cleaning</property>
                 <property name="UseUnderline">True</property>
               </widget>
               <packing>
@@ -102,11 +144,11 @@
               </packing>
             </child>
             <child>
-              <widget class="Gtk.Button" id="button2">
+              <widget class="Gtk.Button" id="btnClear">
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
-                <property name="Label" translatable="yes">GtkButton</property>
+                <property name="Label" translatable="yes">_Clear Selection</property>
                 <property name="UseUnderline">True</property>
               </widget>
               <packing>
