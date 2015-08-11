@@ -1,0 +1,6 @@
+/home/william/Workspace/GitHub/LinuxDeletionUtility/LinuxDeletionUtility/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/william/Workspace/GitHub/LinuxDeletionUtility/LinuxDeletionUtility/obj/x86/Debug/LinuxDeletionUtility.gtk-gui.gui.stetic
+/home/william/Workspace/GitHub/LinuxDeletionUtility/LinuxDeletionUtility/bin/Debug/LinuxDeletionUtility.exe.mdb
+/home/william/Workspace/GitHub/LinuxDeletionUtility/LinuxDeletionUtility/bin/Debug/LinuxDeletionUtility.exe
+/home/william/Workspace/GitHub/LinuxDeletionUtility/LinuxDeletionUtility/obj/x86/Debug/LinuxDeletionUtility.exe
+/home/william/Workspace/GitHub/LinuxDeletionUtility/LinuxDeletionUtility/obj/x86/Debug/LinuxDeletionUtility.exe.mdb
