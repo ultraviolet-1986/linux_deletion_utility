@@ -56,13 +56,13 @@ namespace LinuxDeletionUtility
 		public static void cleanMostRecentlyUsed ()
 		{
 			goHome ();
-			File.Delete (RECENT);
+			File.WriteAllText (RECENT, string.Empty);
 		}
 
 		public static void cleanCommandLineHistory ()
 		{
 			goHome ();
-			File.Delete (TERM);
+			File.WriteAllText (TERM, string.Empty);
 		}
 
 		public static void cleanWastebasket ()
