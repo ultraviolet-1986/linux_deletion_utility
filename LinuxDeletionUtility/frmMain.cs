@@ -6,6 +6,13 @@ public partial class frmMain: Gtk.Window
 	public frmMain () : base (Gtk.WindowType.Toplevel)
 	{
 		Build ();
+		resetApplication ();
+	}
+
+	void resetApplication()
+	{
+		// Clear application console.
+		txtConsole.Buffer.Clear ();
 
 		// Display the first page of the notebook.
 		noteMain.CurrentPage = 0;
@@ -38,5 +45,30 @@ public partial class frmMain: Gtk.Window
 		about.Website = @"https://github.com/ultraviolet-1986/LinuxDeletionUtility";
 		about.Run();
 		about.Destroy();
+	}
+
+	protected void btnClean_Click (object sender, EventArgs e)
+	{
+		if (chkMostRecentlyUsed.Active == false &&
+		    chkCommandLineHistory.Active == false &&
+		    chkWastebasket.Active == false &&
+		    chkImageThumbnails.Active == false)
+		{
+			txtConsole.Buffer.Clear ();
+			txtConsole.Buffer.InsertAtCursor ("You have not selected any items to delete.");
+		}
+		else
+		{
+			// Placeholder text to demonstrate how to write to the console.
+			txtConsole.Buffer.Clear ();
+			txtConsole.Buffer.InsertAtCursor ("Now beginning cleaning Procedure...\n");
+			txtConsole.Buffer.InsertAtCursor ("Performing Cleanup...\n");
+			txtConsole.Buffer.InsertAtCursor ("Cleanup Complete.");
+		}
+	}
+
+	protected void btnClear_Click (object sender, EventArgs e)
+	{
+		resetApplication ();
 	}
 }

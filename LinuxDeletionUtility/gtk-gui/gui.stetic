@@ -210,6 +210,8 @@
                     <property name="Overwrite">True</property>
                     <property name="Text" translatable="yes" />
                     <property name="WrapMode">Word</property>
+                    <property name="LeftMargin">2</property>
+                    <property name="RightMargin">2</property>
                   </widget>
                 </child>
               </widget>
@@ -236,6 +238,7 @@
                 <property name="Type">TextOnly</property>
                 <property name="Label" translatable="yes">_Start Cleaning</property>
                 <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="btnClean_Click" />
               </widget>
               <packing>
                 <property name="Position">0</property>
@@ -258,8 +261,9 @@
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
-                <property name="Label" translatable="yes">_Clear Selection</property>
+                <property name="Label" translatable="yes">_Reset</property>
                 <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="btnClear_Click" />
               </widget>
               <packing>
                 <property name="Position">2</property>

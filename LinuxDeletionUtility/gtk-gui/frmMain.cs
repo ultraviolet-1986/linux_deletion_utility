@@ -196,6 +196,8 @@ public partial class frmMain
 		this.txtConsole.CursorVisible = false;
 		this.txtConsole.Overwrite = true;
 		this.txtConsole.WrapMode = ((global::Gtk.WrapMode)(2));
+		this.txtConsole.LeftMargin = 2;
+		this.txtConsole.RightMargin = 2;
 		this.GtkScrolledWindow.Add (this.txtConsole);
 		this.hboxBody.Add (this.GtkScrolledWindow);
 		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hboxBody [this.GtkScrolledWindow]));
@@ -230,7 +232,7 @@ public partial class frmMain
 		this.btnClear.CanFocus = true;
 		this.btnClear.Name = "btnClear";
 		this.btnClear.UseUnderline = true;
-		this.btnClear.Label = global::Mono.Unix.Catalog.GetString ("_Clear Selection");
+		this.btnClear.Label = global::Mono.Unix.Catalog.GetString ("_Reset");
 		this.hboxFooter.Add (this.btnClear);
 		global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hboxFooter [this.btnClear]));
 		w16.Position = 2;
@@ -249,5 +251,7 @@ public partial class frmMain
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
 		this.dialogInfoAction.Activated += new global::System.EventHandler (this.menuAbout_Click);
 		this.quitAction.Activated += new global::System.EventHandler (this.menuExit_Click);
+		this.btnClean.Clicked += new global::System.EventHandler (this.btnClean_Click);
+		this.btnClear.Clicked += new global::System.EventHandler (this.btnClear_Click);
 	}
 }
