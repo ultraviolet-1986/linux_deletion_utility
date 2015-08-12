@@ -6,6 +6,9 @@ public partial class frmMain: Gtk.Window
 	public frmMain () : base (Gtk.WindowType.Toplevel)
 	{
 		Build ();
+
+		// Display the first page of the notebook.
+		noteMain.CurrentPage = 0;
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)

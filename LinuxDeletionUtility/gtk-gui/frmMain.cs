@@ -13,11 +13,11 @@ public partial class frmMain
 	
 	private global::Gtk.Action quitAction;
 	
-	private global::Gtk.VBox vbox1;
+	private global::Gtk.VBox vboxApplication;
 	
 	private global::Gtk.MenuBar menuMain;
 	
-	private global::Gtk.HBox hbox2;
+	private global::Gtk.HBox hboxBody;
 	
 	private global::Gtk.Notebook noteMain;
 	
@@ -29,7 +29,7 @@ public partial class frmMain
 	
 	private global::Gtk.TextView txtConsole;
 	
-	private global::Gtk.HBox hbox1;
+	private global::Gtk.HBox hboxFooter;
 	
 	private global::Gtk.Button btnClean;
 	
@@ -65,26 +65,26 @@ public partial class frmMain
 		this.DefaultWidth = 600;
 		this.DefaultHeight = 400;
 		// Container child frmMain.Gtk.Container+ContainerChild
-		this.vbox1 = new global::Gtk.VBox ();
-		this.vbox1.Name = "vbox1";
-		this.vbox1.Spacing = 6;
-		this.vbox1.BorderWidth = ((uint)(2));
-		// Container child vbox1.Gtk.Box+BoxChild
+		this.vboxApplication = new global::Gtk.VBox ();
+		this.vboxApplication.Name = "vboxApplication";
+		this.vboxApplication.Spacing = 6;
+		this.vboxApplication.BorderWidth = ((uint)(2));
+		// Container child vboxApplication.Gtk.Box+BoxChild
 		this.UIManager.AddUiFromString ("<ui><menubar name='menuMain'><menu name='FileAction' action='FileAction'><menuitem name='quitAction' action='quitAction'/></menu><menu name='HelpAction' action='HelpAction'><menuitem name='dialogInfoAction' action='dialogInfoAction'/></menu></menubar></ui>");
 		this.menuMain = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/menuMain")));
 		this.menuMain.Name = "menuMain";
-		this.vbox1.Add (this.menuMain);
-		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.menuMain]));
+		this.vboxApplication.Add (this.menuMain);
+		global::Gtk.Box.BoxChild w2 = ((global::Gtk.Box.BoxChild)(this.vboxApplication [this.menuMain]));
 		w2.Position = 0;
 		w2.Expand = false;
 		w2.Fill = false;
-		// Container child vbox1.Gtk.Box+BoxChild
-		this.hbox2 = new global::Gtk.HBox ();
-		this.hbox2.Name = "hbox2";
-		this.hbox2.Homogeneous = true;
-		this.hbox2.Spacing = 6;
-		this.hbox2.BorderWidth = ((uint)(2));
-		// Container child hbox2.Gtk.Box+BoxChild
+		// Container child vboxApplication.Gtk.Box+BoxChild
+		this.hboxBody = new global::Gtk.HBox ();
+		this.hboxBody.Name = "hboxBody";
+		this.hboxBody.Homogeneous = true;
+		this.hboxBody.Spacing = 6;
+		this.hboxBody.BorderWidth = ((uint)(2));
+		// Container child hboxBody.Gtk.Box+BoxChild
 		this.noteMain = new global::Gtk.Notebook ();
 		this.noteMain.CanFocus = true;
 		this.noteMain.Name = "noteMain";
@@ -107,10 +107,10 @@ public partial class frmMain
 		this.lblPageApplications.LabelProp = global::Mono.Unix.Catalog.GetString ("Applications");
 		this.noteMain.SetTabLabel (w4, this.lblPageApplications);
 		this.lblPageApplications.ShowAll ();
-		this.hbox2.Add (this.noteMain);
-		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.noteMain]));
+		this.hboxBody.Add (this.noteMain);
+		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hboxBody [this.noteMain]));
 		w5.Position = 0;
-		// Container child hbox2.Gtk.Box+BoxChild
+		// Container child hboxBody.Gtk.Box+BoxChild
 		this.GtkScrolledWindow = new global::Gtk.ScrolledWindow ();
 		this.GtkScrolledWindow.Name = "GtkScrolledWindow";
 		this.GtkScrolledWindow.ShadowType = ((global::Gtk.ShadowType)(1));
@@ -123,51 +123,51 @@ public partial class frmMain
 		this.txtConsole.Overwrite = true;
 		this.txtConsole.WrapMode = ((global::Gtk.WrapMode)(2));
 		this.GtkScrolledWindow.Add (this.txtConsole);
-		this.hbox2.Add (this.GtkScrolledWindow);
-		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hbox2 [this.GtkScrolledWindow]));
+		this.hboxBody.Add (this.GtkScrolledWindow);
+		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hboxBody [this.GtkScrolledWindow]));
 		w7.Position = 1;
-		this.vbox1.Add (this.hbox2);
-		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox2]));
+		this.vboxApplication.Add (this.hboxBody);
+		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vboxApplication [this.hboxBody]));
 		w8.Position = 1;
-		// Container child vbox1.Gtk.Box+BoxChild
-		this.hbox1 = new global::Gtk.HBox ();
-		this.hbox1.Name = "hbox1";
-		this.hbox1.Spacing = 6;
-		this.hbox1.BorderWidth = ((uint)(2));
-		// Container child hbox1.Gtk.Box+BoxChild
+		// Container child vboxApplication.Gtk.Box+BoxChild
+		this.hboxFooter = new global::Gtk.HBox ();
+		this.hboxFooter.Name = "hboxFooter";
+		this.hboxFooter.Spacing = 6;
+		this.hboxFooter.BorderWidth = ((uint)(2));
+		// Container child hboxFooter.Gtk.Box+BoxChild
 		this.btnClean = new global::Gtk.Button ();
 		this.btnClean.CanFocus = true;
 		this.btnClean.Name = "btnClean";
 		this.btnClean.UseUnderline = true;
 		this.btnClean.Label = global::Mono.Unix.Catalog.GetString ("_Start Cleaning");
-		this.hbox1.Add (this.btnClean);
-		global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.btnClean]));
+		this.hboxFooter.Add (this.btnClean);
+		global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.hboxFooter [this.btnClean]));
 		w9.Position = 0;
 		w9.Expand = false;
 		w9.Fill = false;
-		// Container child hbox1.Gtk.Box+BoxChild
+		// Container child hboxFooter.Gtk.Box+BoxChild
 		this.hseparator1 = new global::Gtk.HSeparator ();
 		this.hseparator1.Name = "hseparator1";
-		this.hbox1.Add (this.hseparator1);
-		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.hseparator1]));
+		this.hboxFooter.Add (this.hseparator1);
+		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.hboxFooter [this.hseparator1]));
 		w10.Position = 1;
-		// Container child hbox1.Gtk.Box+BoxChild
+		// Container child hboxFooter.Gtk.Box+BoxChild
 		this.btnClear = new global::Gtk.Button ();
 		this.btnClear.CanFocus = true;
 		this.btnClear.Name = "btnClear";
 		this.btnClear.UseUnderline = true;
 		this.btnClear.Label = global::Mono.Unix.Catalog.GetString ("_Clear Selection");
-		this.hbox1.Add (this.btnClear);
-		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.hbox1 [this.btnClear]));
+		this.hboxFooter.Add (this.btnClear);
+		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.hboxFooter [this.btnClear]));
 		w11.Position = 2;
 		w11.Expand = false;
 		w11.Fill = false;
-		this.vbox1.Add (this.hbox1);
-		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vbox1 [this.hbox1]));
+		this.vboxApplication.Add (this.hboxFooter);
+		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vboxApplication [this.hboxFooter]));
 		w12.Position = 2;
 		w12.Expand = false;
 		w12.Fill = false;
-		this.Add (this.vbox1);
+		this.Add (this.vboxApplication);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}

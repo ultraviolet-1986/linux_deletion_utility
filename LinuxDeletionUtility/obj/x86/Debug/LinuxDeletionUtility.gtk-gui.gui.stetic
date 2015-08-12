@@ -44,7 +44,7 @@
     <property name="DefaultHeight">400</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
     <child>
-      <widget class="Gtk.VBox" id="vbox1">
+      <widget class="Gtk.VBox" id="vboxApplication">
         <property name="MemberName" />
         <property name="Spacing">6</property>
         <property name="BorderWidth">2</property>
@@ -68,7 +68,7 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.HBox" id="hbox2">
+          <widget class="Gtk.HBox" id="hboxBody">
             <property name="MemberName" />
             <property name="Homogeneous">True</property>
             <property name="Spacing">6</property>
@@ -137,7 +137,7 @@
           </packing>
         </child>
         <child>
-          <widget class="Gtk.HBox" id="hbox1">
+          <widget class="Gtk.HBox" id="hboxFooter">
             <property name="MemberName" />
             <property name="Spacing">6</property>
             <property name="BorderWidth">2</property>
