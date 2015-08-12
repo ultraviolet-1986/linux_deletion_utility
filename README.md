@@ -15,5 +15,5 @@ A simple utility for deleting unnecessary files in a user's Home folder.
 - Clone repository to Virtual Machine for safer development and testing.
 
 **Change Log:**
-- 11/08/2015: Began the project with the aim of creating a user-friendly application which can help keep a user's Home folder tidy and clean.
-- 12/08/2015: Included some basic deletion functionality and organised the code into sections, or what I call 'blocks'.
+- **11/08/2015**: Began the project with the aim of creating a user-friendly application which can help keep a user's Home folder tidy and clean.
+- **12/08/2015**: Included some basic deletion functionality and organised the code into sections, or what I call 'blocks'.
