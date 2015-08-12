@@ -9,6 +9,12 @@ public partial class frmMain: Gtk.Window
 
 		// Display the first page of the notebook.
 		noteMain.CurrentPage = 0;
+
+		// Clear all Home Folder checkboxes.
+		chkMostRecentlyUsed.Active = false;
+		chkCommandLineHistory.Active = false;
+		chkWastebasket.Active = false;
+		chkImageThumbnails.Active = false;
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)

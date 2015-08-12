@@ -21,6 +21,18 @@ public partial class frmMain
 	
 	private global::Gtk.Notebook noteMain;
 	
+	private global::Gtk.VBox vboxPageHome;
+	
+	private global::Gtk.Label lblHomeInfo;
+	
+	private global::Gtk.CheckButton chkMostRecentlyUsed;
+	
+	private global::Gtk.CheckButton chkCommandLineHistory;
+	
+	private global::Gtk.CheckButton chkWastebasket;
+	
+	private global::Gtk.CheckButton chkImageThumbnails;
+	
 	private global::Gtk.Label lblPageHome;
 	
 	private global::Gtk.Label lblPageApplications;
@@ -89,27 +101,89 @@ public partial class frmMain
 		this.noteMain.CanFocus = true;
 		this.noteMain.Name = "noteMain";
 		this.noteMain.CurrentPage = 0;
+		// Container child noteMain.Gtk.Notebook+NotebookChild
+		this.vboxPageHome = new global::Gtk.VBox ();
+		this.vboxPageHome.Name = "vboxPageHome";
+		this.vboxPageHome.Spacing = 8;
+		this.vboxPageHome.BorderWidth = ((uint)(2));
+		// Container child vboxPageHome.Gtk.Box+BoxChild
+		this.lblHomeInfo = new global::Gtk.Label ();
+		this.lblHomeInfo.Name = "lblHomeInfo";
+		this.lblHomeInfo.LabelProp = global::Mono.Unix.Catalog.GetString ("<b>Home Folder Items</b>");
+		this.lblHomeInfo.UseMarkup = true;
+		this.vboxPageHome.Add (this.lblHomeInfo);
+		global::Gtk.Box.BoxChild w3 = ((global::Gtk.Box.BoxChild)(this.vboxPageHome [this.lblHomeInfo]));
+		w3.Position = 1;
+		w3.Expand = false;
+		w3.Fill = false;
+		w3.Padding = ((uint)(2));
+		// Container child vboxPageHome.Gtk.Box+BoxChild
+		this.chkMostRecentlyUsed = new global::Gtk.CheckButton ();
+		this.chkMostRecentlyUsed.CanFocus = true;
+		this.chkMostRecentlyUsed.Name = "chkMostRecentlyUsed";
+		this.chkMostRecentlyUsed.Label = global::Mono.Unix.Catalog.GetString ("Most Recently Used Files List");
+		this.chkMostRecentlyUsed.DrawIndicator = true;
+		this.chkMostRecentlyUsed.UseUnderline = true;
+		this.vboxPageHome.Add (this.chkMostRecentlyUsed);
+		global::Gtk.Box.BoxChild w4 = ((global::Gtk.Box.BoxChild)(this.vboxPageHome [this.chkMostRecentlyUsed]));
+		w4.Position = 2;
+		w4.Expand = false;
+		w4.Fill = false;
+		// Container child vboxPageHome.Gtk.Box+BoxChild
+		this.chkCommandLineHistory = new global::Gtk.CheckButton ();
+		this.chkCommandLineHistory.CanFocus = true;
+		this.chkCommandLineHistory.Name = "chkCommandLineHistory";
+		this.chkCommandLineHistory.Label = global::Mono.Unix.Catalog.GetString ("Command Line History");
+		this.chkCommandLineHistory.DrawIndicator = true;
+		this.chkCommandLineHistory.UseUnderline = true;
+		this.vboxPageHome.Add (this.chkCommandLineHistory);
+		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.vboxPageHome [this.chkCommandLineHistory]));
+		w5.Position = 3;
+		w5.Expand = false;
+		w5.Fill = false;
+		// Container child vboxPageHome.Gtk.Box+BoxChild
+		this.chkWastebasket = new global::Gtk.CheckButton ();
+		this.chkWastebasket.CanFocus = true;
+		this.chkWastebasket.Name = "chkWastebasket";
+		this.chkWastebasket.Label = global::Mono.Unix.Catalog.GetString ("Wastebasket / Trash Contents");
+		this.chkWastebasket.DrawIndicator = true;
+		this.chkWastebasket.UseUnderline = true;
+		this.vboxPageHome.Add (this.chkWastebasket);
+		global::Gtk.Box.BoxChild w6 = ((global::Gtk.Box.BoxChild)(this.vboxPageHome [this.chkWastebasket]));
+		w6.Position = 4;
+		w6.Expand = false;
+		w6.Fill = false;
+		// Container child vboxPageHome.Gtk.Box+BoxChild
+		this.chkImageThumbnails = new global::Gtk.CheckButton ();
+		this.chkImageThumbnails.CanFocus = true;
+		this.chkImageThumbnails.Name = "chkImageThumbnails";
+		this.chkImageThumbnails.Label = global::Mono.Unix.Catalog.GetString ("Image Thumbnail Cache");
+		this.chkImageThumbnails.DrawIndicator = true;
+		this.chkImageThumbnails.UseUnderline = true;
+		this.vboxPageHome.Add (this.chkImageThumbnails);
+		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.vboxPageHome [this.chkImageThumbnails]));
+		w7.Position = 5;
+		w7.Expand = false;
+		w7.Fill = false;
+		this.noteMain.Add (this.vboxPageHome);
 		// Notebook tab
-		global::Gtk.Label w3 = new global::Gtk.Label ();
-		w3.Visible = true;
-		this.noteMain.Add (w3);
 		this.lblPageHome = new global::Gtk.Label ();
 		this.lblPageHome.Name = "lblPageHome";
 		this.lblPageHome.LabelProp = global::Mono.Unix.Catalog.GetString ("Home Folder");
-		this.noteMain.SetTabLabel (w3, this.lblPageHome);
+		this.noteMain.SetTabLabel (this.vboxPageHome, this.lblPageHome);
 		this.lblPageHome.ShowAll ();
 		// Notebook tab
-		global::Gtk.Label w4 = new global::Gtk.Label ();
-		w4.Visible = true;
-		this.noteMain.Add (w4);
+		global::Gtk.Label w9 = new global::Gtk.Label ();
+		w9.Visible = true;
+		this.noteMain.Add (w9);
 		this.lblPageApplications = new global::Gtk.Label ();
 		this.lblPageApplications.Name = "lblPageApplications";
 		this.lblPageApplications.LabelProp = global::Mono.Unix.Catalog.GetString ("Applications");
-		this.noteMain.SetTabLabel (w4, this.lblPageApplications);
+		this.noteMain.SetTabLabel (w9, this.lblPageApplications);
 		this.lblPageApplications.ShowAll ();
 		this.hboxBody.Add (this.noteMain);
-		global::Gtk.Box.BoxChild w5 = ((global::Gtk.Box.BoxChild)(this.hboxBody [this.noteMain]));
-		w5.Position = 0;
+		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.hboxBody [this.noteMain]));
+		w10.Position = 0;
 		// Container child hboxBody.Gtk.Box+BoxChild
 		this.GtkScrolledWindow = new global::Gtk.ScrolledWindow ();
 		this.GtkScrolledWindow.Name = "GtkScrolledWindow";
@@ -124,11 +198,11 @@ public partial class frmMain
 		this.txtConsole.WrapMode = ((global::Gtk.WrapMode)(2));
 		this.GtkScrolledWindow.Add (this.txtConsole);
 		this.hboxBody.Add (this.GtkScrolledWindow);
-		global::Gtk.Box.BoxChild w7 = ((global::Gtk.Box.BoxChild)(this.hboxBody [this.GtkScrolledWindow]));
-		w7.Position = 1;
+		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hboxBody [this.GtkScrolledWindow]));
+		w12.Position = 1;
 		this.vboxApplication.Add (this.hboxBody);
-		global::Gtk.Box.BoxChild w8 = ((global::Gtk.Box.BoxChild)(this.vboxApplication [this.hboxBody]));
-		w8.Position = 1;
+		global::Gtk.Box.BoxChild w13 = ((global::Gtk.Box.BoxChild)(this.vboxApplication [this.hboxBody]));
+		w13.Position = 1;
 		// Container child vboxApplication.Gtk.Box+BoxChild
 		this.hboxFooter = new global::Gtk.HBox ();
 		this.hboxFooter.Name = "hboxFooter";
@@ -141,16 +215,16 @@ public partial class frmMain
 		this.btnClean.UseUnderline = true;
 		this.btnClean.Label = global::Mono.Unix.Catalog.GetString ("_Start Cleaning");
 		this.hboxFooter.Add (this.btnClean);
-		global::Gtk.Box.BoxChild w9 = ((global::Gtk.Box.BoxChild)(this.hboxFooter [this.btnClean]));
-		w9.Position = 0;
-		w9.Expand = false;
-		w9.Fill = false;
+		global::Gtk.Box.BoxChild w14 = ((global::Gtk.Box.BoxChild)(this.hboxFooter [this.btnClean]));
+		w14.Position = 0;
+		w14.Expand = false;
+		w14.Fill = false;
 		// Container child hboxFooter.Gtk.Box+BoxChild
 		this.hseparator1 = new global::Gtk.HSeparator ();
 		this.hseparator1.Name = "hseparator1";
 		this.hboxFooter.Add (this.hseparator1);
-		global::Gtk.Box.BoxChild w10 = ((global::Gtk.Box.BoxChild)(this.hboxFooter [this.hseparator1]));
-		w10.Position = 1;
+		global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.hboxFooter [this.hseparator1]));
+		w15.Position = 1;
 		// Container child hboxFooter.Gtk.Box+BoxChild
 		this.btnClear = new global::Gtk.Button ();
 		this.btnClear.CanFocus = true;
@@ -158,15 +232,15 @@ public partial class frmMain
 		this.btnClear.UseUnderline = true;
 		this.btnClear.Label = global::Mono.Unix.Catalog.GetString ("_Clear Selection");
 		this.hboxFooter.Add (this.btnClear);
-		global::Gtk.Box.BoxChild w11 = ((global::Gtk.Box.BoxChild)(this.hboxFooter [this.btnClear]));
-		w11.Position = 2;
-		w11.Expand = false;
-		w11.Fill = false;
+		global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hboxFooter [this.btnClear]));
+		w16.Position = 2;
+		w16.Expand = false;
+		w16.Fill = false;
 		this.vboxApplication.Add (this.hboxFooter);
-		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.vboxApplication [this.hboxFooter]));
-		w12.Position = 2;
-		w12.Expand = false;
-		w12.Fill = false;
+		global::Gtk.Box.BoxChild w17 = ((global::Gtk.Box.BoxChild)(this.vboxApplication [this.hboxFooter]));
+		w17.Position = 2;
+		w17.Expand = false;
+		w17.Fill = false;
 		this.Add (this.vboxApplication);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
