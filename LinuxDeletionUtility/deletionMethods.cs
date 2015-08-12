@@ -7,16 +7,24 @@ namespace LinuxDeletionUtility
 	public class deletionMethods
 	{
 		// #############################################################################
-		// MAIN DELETION FUNCTIONS
+		// MAIN DELETION VARIABLES
 		// #############################################################################
 
-		#region mainDeletionFunctions
+		#region mainDeletionVariables
 
 		// WARNING: ALTERING THESE VALUES WILL DAMAGE YOUR SYSTEM
 		const string RECENT = @".local/share/recently-used.xbel";
 		const string TERM = ".bash_history";
 		const string TRASH = @".local/share/Trash";
 		const string THUMBS = @".cache/thumbnails";
+
+		#endregion
+
+		// #############################################################################
+		// MAIN DELETION FUNCTIONS
+		// #############################################################################
+
+		#region mainDeletionFunctions
 
 		public static void goHome ()
 		{
