@@ -39,7 +39,6 @@
     <property name="Title" translatable="yes">Linux Deletion Utility</property>
     <property name="Icon">stock:gtk-execute Menu</property>
     <property name="WindowPosition">CenterOnParent</property>
-    <property name="AllowShrink">True</property>
     <property name="DefaultWidth">600</property>
     <property name="DefaultHeight">400</property>
     <signal name="DeleteEvent" handler="OnDeleteEvent" />
