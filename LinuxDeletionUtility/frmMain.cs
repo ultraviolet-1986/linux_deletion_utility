@@ -56,8 +56,28 @@ public partial class frmMain: Gtk.Window
 
 		txtConsole.Buffer.Clear ();
 
+		if (chkMostRecentlyUsed.Active == true) {
+			txtConsole.Buffer.InsertAtCursor ("Now cleaning Most Recently Used list...\n");
+			deletionMethods.cleanMostRecentlyUsed ();
+			txtConsole.Buffer.InsertAtCursor ("Most Recently Used list is now clean.\n\n");
+		}
+
+		if (chkCommandLineHistory.Active == true) {
+			txtConsole.Buffer.InsertAtCursor ("Now cleaning Command Line history...\n");
+			deletionMethods.cleanCommandLineHistory ();
+			txtConsole.Buffer.InsertAtCursor ("Command Line history is now clean.\n\n");
+		}
+
+		if (chkWastebasket.Active == true) {
+			txtConsole.Buffer.InsertAtCursor ("Now cleaning Wastebasket / Trash contents...\n");
+			deletionMethods.cleanWastebasket ();
+			txtConsole.Buffer.InsertAtCursor ("Wastebasket / Trash is now cleaned.\n\n");
+		}
+
 		if (chkImageThumbnails.Active == true) {
+			txtConsole.Buffer.InsertAtCursor ("Now cleaning Image Thumbnail cache...\n");
 			deletionMethods.cleanImageThumbnails ();
+			txtConsole.Buffer.InsertAtCursor ("Image Thumbnail cache is now cleaned.\n\n");
 		}
 
 		checkboxEnabled (true);

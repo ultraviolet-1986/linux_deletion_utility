@@ -12,7 +12,13 @@ namespace LinuxDeletionUtility
 
 		#region mainDeletionFunctions
 
-		public static void changeToHome ()
+		// WARNING: ALTERING THESE VALUES WILL DAMAGE YOUR SYSTEM
+		const string RECENT = @".local/share/recently-used.xbel";
+		const string TERM = ".bash_history";
+		const string TRASH = @".local/share/Trash";
+		const string THUMBS = @".cache/thumbnails";
+
+		public static void goHome ()
 		{
 			string homePath = Environment.GetEnvironmentVariable ("HOME");
 			Environment.CurrentDirectory = homePath;
@@ -41,24 +47,26 @@ namespace LinuxDeletionUtility
 
 		public static void cleanMostRecentlyUsed ()
 		{
-			// Insert Cleaner code here.
+			goHome ();
+			File.Delete (RECENT);
 		}
 
 		public static void cleanCommandLineHistory ()
 		{
-			// Insert Cleaner code here.
+			goHome ();
+			File.Delete (TERM);
 		}
 
 		public static void cleanWastebasket ()
 		{
-			// Insert Cleaner code here.
+			goHome ();
+			deleteFiles (TRASH);
 		}
 
 		public static void cleanImageThumbnails ()
 		{
-			changeToHome ();
-			string imageThumbnailPath = @".cache/thumbnails";
-			deleteFiles (imageThumbnailPath);
+			goHome ();
+			deleteFiles (THUMBS);
 		}
 
 		#endregion
