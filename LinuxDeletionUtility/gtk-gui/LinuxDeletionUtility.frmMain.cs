@@ -48,7 +48,7 @@ namespace LinuxDeletionUtility
 		
 		private global::Gtk.HSeparator hseparator1;
 		
-		private global::Gtk.Button btnClear;
+		private global::Gtk.Button btnReset;
 
 		protected virtual void Build ()
 		{
@@ -117,7 +117,7 @@ namespace LinuxDeletionUtility
 			w3.Position = 1;
 			w3.Expand = false;
 			w3.Fill = false;
-			w3.Padding = ((uint)(2));
+			w3.Padding = ((uint)(8));
 			// Container child vboxPageHome.Gtk.Box+BoxChild
 			this.chkMostRecentlyUsed = new global::Gtk.CheckButton ();
 			this.chkMostRecentlyUsed.CanFocus = true;
@@ -229,13 +229,13 @@ namespace LinuxDeletionUtility
 			global::Gtk.Box.BoxChild w15 = ((global::Gtk.Box.BoxChild)(this.hboxFooter [this.hseparator1]));
 			w15.Position = 1;
 			// Container child hboxFooter.Gtk.Box+BoxChild
-			this.btnClear = new global::Gtk.Button ();
-			this.btnClear.CanFocus = true;
-			this.btnClear.Name = "btnClear";
-			this.btnClear.UseUnderline = true;
-			this.btnClear.Label = global::Mono.Unix.Catalog.GetString ("_Reset");
-			this.hboxFooter.Add (this.btnClear);
-			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hboxFooter [this.btnClear]));
+			this.btnReset = new global::Gtk.Button ();
+			this.btnReset.CanFocus = true;
+			this.btnReset.Name = "btnReset";
+			this.btnReset.UseUnderline = true;
+			this.btnReset.Label = global::Mono.Unix.Catalog.GetString ("_Reset");
+			this.hboxFooter.Add (this.btnReset);
+			global::Gtk.Box.BoxChild w16 = ((global::Gtk.Box.BoxChild)(this.hboxFooter [this.btnReset]));
 			w16.Position = 2;
 			w16.Expand = false;
 			w16.Fill = false;
@@ -253,7 +253,7 @@ namespace LinuxDeletionUtility
 			this.dialogInfoAction.Activated += new global::System.EventHandler (this.menuAbout_Click);
 			this.quitAction.Activated += new global::System.EventHandler (this.menuExit_Click);
 			this.btnClean.Clicked += new global::System.EventHandler (this.btnClean_Click);
-			this.btnClear.Clicked += new global::System.EventHandler (this.btnClear_Click);
+			this.btnReset.Clicked += new global::System.EventHandler (this.btnReset_Click);
 		}
 	}
 }

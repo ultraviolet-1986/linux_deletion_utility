@@ -97,7 +97,7 @@
                         <property name="AutoSize">True</property>
                         <property name="Expand">False</property>
                         <property name="Fill">False</property>
-                        <property name="Padding">2</property>
+                        <property name="Padding">8</property>
                       </packing>
                     </child>
                     <child>
@@ -257,13 +257,13 @@
               </packing>
             </child>
             <child>
-              <widget class="Gtk.Button" id="btnClear">
+              <widget class="Gtk.Button" id="btnReset">
                 <property name="MemberName" />
                 <property name="CanFocus">True</property>
                 <property name="Type">TextOnly</property>
                 <property name="Label" translatable="yes">_Reset</property>
                 <property name="UseUnderline">True</property>
-                <signal name="Clicked" handler="btnClear_Click" />
+                <signal name="Clicked" handler="btnReset_Click" />
               </widget>
               <packing>
                 <property name="Position">2</property>

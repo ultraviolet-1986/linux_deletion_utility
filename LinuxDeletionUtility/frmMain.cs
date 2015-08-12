@@ -103,7 +103,7 @@ namespace LinuxDeletionUtility
 			}
 		}
 
-		protected void btnClear_Click (object sender, EventArgs e)
+		protected void btnReset_Click (object sender, EventArgs e)
 		{
 			resetApplication ();
 		}
