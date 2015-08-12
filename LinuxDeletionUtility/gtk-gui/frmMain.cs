@@ -9,6 +9,10 @@ public partial class frmMain
 	
 	private global::Gtk.Action dialogInfoAction;
 	
+	private global::Gtk.Action FileAction;
+	
+	private global::Gtk.Action quitAction;
+	
 	private global::Gtk.VBox vbox1;
 	
 	private global::Gtk.MenuBar menuMain;
@@ -39,12 +43,18 @@ public partial class frmMain
 		// Widget frmMain
 		this.UIManager = new global::Gtk.UIManager ();
 		global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup ("Default");
-		this.HelpAction = new global::Gtk.Action ("HelpAction", global::Mono.Unix.Catalog.GetString ("_Help"), null, null);
+		this.HelpAction = new global::Gtk.Action ("HelpAction", global::Mono.Unix.Catalog.GetString ("Help"), null, null);
 		this.HelpAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("_Help");
 		w1.Add (this.HelpAction, null);
 		this.dialogInfoAction = new global::Gtk.Action ("dialogInfoAction", global::Mono.Unix.Catalog.GetString ("_About"), null, "gtk-dialog-info");
 		this.dialogInfoAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("_About");
 		w1.Add (this.dialogInfoAction, null);
+		this.FileAction = new global::Gtk.Action ("FileAction", global::Mono.Unix.Catalog.GetString ("_File"), null, null);
+		this.FileAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("_File");
+		w1.Add (this.FileAction, null);
+		this.quitAction = new global::Gtk.Action ("quitAction", global::Mono.Unix.Catalog.GetString ("Exit"), null, "gtk-quit");
+		this.quitAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("E_xit");
+		w1.Add (this.quitAction, null);
 		this.UIManager.InsertActionGroup (w1, 0);
 		this.AddAccelGroup (this.UIManager.AccelGroup);
 		this.Name = "frmMain";
@@ -58,8 +68,9 @@ public partial class frmMain
 		this.vbox1 = new global::Gtk.VBox ();
 		this.vbox1.Name = "vbox1";
 		this.vbox1.Spacing = 6;
+		this.vbox1.BorderWidth = ((uint)(2));
 		// Container child vbox1.Gtk.Box+BoxChild
-		this.UIManager.AddUiFromString ("<ui><menubar name='menuMain'><menu name='HelpAction' action='HelpAction'><menuitem name='dialogInfoAction' action='dialogInfoAction'/></menu></menubar></ui>");
+		this.UIManager.AddUiFromString ("<ui><menubar name='menuMain'><menu name='FileAction' action='FileAction'><menuitem name='quitAction' action='quitAction'/></menu><menu name='HelpAction' action='HelpAction'><menuitem name='dialogInfoAction' action='dialogInfoAction'/></menu></menubar></ui>");
 		this.menuMain = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/menuMain")));
 		this.menuMain.Name = "menuMain";
 		this.vbox1.Add (this.menuMain);
@@ -70,7 +81,9 @@ public partial class frmMain
 		// Container child vbox1.Gtk.Box+BoxChild
 		this.hbox2 = new global::Gtk.HBox ();
 		this.hbox2.Name = "hbox2";
+		this.hbox2.Homogeneous = true;
 		this.hbox2.Spacing = 6;
+		this.hbox2.BorderWidth = ((uint)(2));
 		// Container child hbox2.Gtk.Box+BoxChild
 		this.noteMain = new global::Gtk.Notebook ();
 		this.noteMain.CanFocus = true;
@@ -105,6 +118,9 @@ public partial class frmMain
 		this.txtConsole = new global::Gtk.TextView ();
 		this.txtConsole.CanFocus = true;
 		this.txtConsole.Name = "txtConsole";
+		this.txtConsole.Editable = false;
+		this.txtConsole.CursorVisible = false;
+		this.txtConsole.Overwrite = true;
 		this.txtConsole.WrapMode = ((global::Gtk.WrapMode)(2));
 		this.GtkScrolledWindow.Add (this.txtConsole);
 		this.hbox2.Add (this.GtkScrolledWindow);
@@ -117,6 +133,7 @@ public partial class frmMain
 		this.hbox1 = new global::Gtk.HBox ();
 		this.hbox1.Name = "hbox1";
 		this.hbox1.Spacing = 6;
+		this.hbox1.BorderWidth = ((uint)(2));
 		// Container child hbox1.Gtk.Box+BoxChild
 		this.btnClean = new global::Gtk.Button ();
 		this.btnClean.CanFocus = true;
@@ -157,5 +174,6 @@ public partial class frmMain
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
 		this.dialogInfoAction.Activated += new global::System.EventHandler (this.menuAbout_Click);
+		this.quitAction.Activated += new global::System.EventHandler (this.menuExit_Click);
 	}
 }

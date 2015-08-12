@@ -14,9 +14,13 @@ public partial class frmMain: Gtk.Window
 		a.RetVal = true;
 	}
 
+	protected void menuExit_Click (object sender, EventArgs e)
+	{
+		Application.Quit ();
+	}
+
 	protected void menuAbout_Click (object sender, EventArgs e)
 	{
-		// ABOUT THE AUTHOR DIALOG
 		AboutDialog about = new AboutDialog();
 		about.ProgramName = "Linux Deletion Utility";
 		about.Version = "0.1";

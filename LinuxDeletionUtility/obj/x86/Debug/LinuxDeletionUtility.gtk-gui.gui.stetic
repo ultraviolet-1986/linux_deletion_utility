@@ -12,7 +12,7 @@
     <action-group name="Default">
       <action id="HelpAction">
         <property name="Type">Action</property>
-        <property name="Label" translatable="yes">_Help</property>
+        <property name="Label" translatable="yes">Help</property>
         <property name="ShortLabel" translatable="yes">_Help</property>
       </action>
       <action id="dialogInfoAction">
@@ -21,6 +21,18 @@
         <property name="ShortLabel" translatable="yes">_About</property>
         <property name="StockId">gtk-dialog-info</property>
         <signal name="Activated" handler="menuAbout_Click" />
+      </action>
+      <action id="FileAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">_File</property>
+        <property name="ShortLabel" translatable="yes">_File</property>
+      </action>
+      <action id="quitAction">
+        <property name="Type">Action</property>
+        <property name="Label" translatable="yes">Exit</property>
+        <property name="ShortLabel" translatable="yes">E_xit</property>
+        <property name="StockId">gtk-quit</property>
+        <signal name="Activated" handler="menuExit_Click" />
       </action>
     </action-group>
     <property name="MemberName" />
@@ -35,10 +47,14 @@
       <widget class="Gtk.VBox" id="vbox1">
         <property name="MemberName" />
         <property name="Spacing">6</property>
+        <property name="BorderWidth">2</property>
         <child>
           <widget class="Gtk.MenuBar" id="menuMain">
             <property name="MemberName" />
             <node name="menuMain" type="Menubar">
+              <node type="Menu" action="FileAction">
+                <node type="Menuitem" action="quitAction" />
+              </node>
               <node type="Menu" action="HelpAction">
                 <node type="Menuitem" action="dialogInfoAction" />
               </node>
@@ -54,7 +70,9 @@
         <child>
           <widget class="Gtk.HBox" id="hbox2">
             <property name="MemberName" />
+            <property name="Homogeneous">True</property>
             <property name="Spacing">6</property>
+            <property name="BorderWidth">2</property>
             <child>
               <widget class="Gtk.Notebook" id="noteMain">
                 <property name="MemberName" />
@@ -99,6 +117,9 @@
                     <property name="MemberName" />
                     <property name="CanFocus">True</property>
                     <property name="ShowScrollbars">True</property>
+                    <property name="Editable">False</property>
+                    <property name="CursorVisible">False</property>
+                    <property name="Overwrite">True</property>
                     <property name="Text" translatable="yes" />
                     <property name="WrapMode">Word</property>
                   </widget>
@@ -119,6 +140,7 @@
           <widget class="Gtk.HBox" id="hbox1">
             <property name="MemberName" />
             <property name="Spacing">6</property>
+            <property name="BorderWidth">2</property>
             <child>
               <widget class="Gtk.Button" id="btnClean">
                 <property name="MemberName" />
