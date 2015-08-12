@@ -9,7 +9,7 @@ public partial class frmMain: Gtk.Window
 		resetApplication ();
 	}
 
-	void resetApplication()
+	public void resetApplication()
 	{
 		// Clear application console.
 		txtConsole.Buffer.Clear ();
@@ -22,6 +22,14 @@ public partial class frmMain: Gtk.Window
 		chkCommandLineHistory.Active = false;
 		chkWastebasket.Active = false;
 		chkImageThumbnails.Active = false;
+	}
+
+	public void checkboxEnabled(bool state)
+	{
+		chkMostRecentlyUsed.Sensitive = state;
+		chkCommandLineHistory.Sensitive = state;
+		chkWastebasket.Sensitive = state;
+		chkImageThumbnails.Sensitive = state;
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
@@ -59,11 +67,15 @@ public partial class frmMain: Gtk.Window
 		}
 		else
 		{
+			checkboxEnabled (false);
+
 			// Placeholder text to demonstrate how to write to the console.
 			txtConsole.Buffer.Clear ();
 			txtConsole.Buffer.InsertAtCursor ("Now beginning cleaning Procedure...\n");
 			txtConsole.Buffer.InsertAtCursor ("Performing Cleanup...\n");
 			txtConsole.Buffer.InsertAtCursor ("Cleanup Complete.");
+
+			checkboxEnabled (true);
 		}
 	}
 
