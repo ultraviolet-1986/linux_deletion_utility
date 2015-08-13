@@ -4,7 +4,7 @@ using System.IO;
 
 namespace LinuxDeletionUtility
 {
-	public class deletionMethods
+	public class deletionLibrary
 	{
 		// #############################################################################
 		// MAIN DELETION VARIABLES

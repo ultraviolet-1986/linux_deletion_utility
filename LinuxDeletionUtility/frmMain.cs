@@ -1,4 +1,5 @@
 ﻿using System;
+using Gdk;
 using Gtk;
 using LinuxDeletionUtility;
 
@@ -58,25 +59,25 @@ public partial class frmMain: Gtk.Window
 
 		if (chkMostRecentlyUsed.Active == true) {
 			txtConsole.Buffer.InsertAtCursor ("Now cleaning Most Recently Used list...\n");
-			deletionMethods.cleanMostRecentlyUsed ();
+			deletionLibrary.cleanMostRecentlyUsed ();
 			txtConsole.Buffer.InsertAtCursor ("Most Recently Used list is now clean.\n\n");
 		}
 
 		if (chkCommandLineHistory.Active == true) {
 			txtConsole.Buffer.InsertAtCursor ("Now cleaning Command Line history...\n");
-			deletionMethods.cleanCommandLineHistory ();
+			deletionLibrary.cleanCommandLineHistory ();
 			txtConsole.Buffer.InsertAtCursor ("Command Line history is now clean.\n\n");
 		}
 
 		if (chkWastebasket.Active == true) {
 			txtConsole.Buffer.InsertAtCursor ("Now cleaning Wastebasket / Trash contents...\n");
-			deletionMethods.cleanWastebasket ();
+			deletionLibrary.cleanWastebasket ();
 			txtConsole.Buffer.InsertAtCursor ("Wastebasket / Trash is now cleaned.\n\n");
 		}
 
 		if (chkImageThumbnails.Active == true) {
 			txtConsole.Buffer.InsertAtCursor ("Now cleaning Image Thumbnail cache...\n");
-			deletionMethods.cleanImageThumbnails ();
+			deletionLibrary.cleanImageThumbnails ();
 			txtConsole.Buffer.InsertAtCursor ("Image Thumbnail cache is now cleaned.\n\n");
 		}
 
@@ -97,7 +98,7 @@ public partial class frmMain: Gtk.Window
 		Application.Quit ();
 	}
 
-	protected void menuAbout_Click (object sender, EventArgs e)
+	public void menuAbout_Click (object sender, EventArgs e)
 	{
 		AboutDialog about = new AboutDialog ();
 		about.ProgramName = "Linux Deletion Utility";
@@ -105,6 +106,7 @@ public partial class frmMain: Gtk.Window
 		about.Copyright = "(c) William Willis Whinn";
 		about.Comments = "This is a simple application to delete unnecessary files inside a user's Home folder.";
 		about.Website = @"https://github.com/ultraviolet-1986/LinuxDeletionUtility";
+		//about.Logo = new Gdk.Pixbuf ("gtk-execute.png");
 		about.Run ();
 		about.Destroy ();
 	}

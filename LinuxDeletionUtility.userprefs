@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="LinuxDeletionUtility/LinuxDeletionUtility.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LinuxDeletionUtility/frmMain.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinuxDeletionUtility/deletionMethods.cs">
     <Files>
       <File FileName="LinuxDeletionUtility/frmMain.cs" Line="1" Column="1" />
-      <File FileName="LinuxDeletionUtility/deletionMethods.cs" Line="57" Column="4" />
+      <File FileName="LinuxDeletionUtility/deletionMethods.cs" Line="3" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
