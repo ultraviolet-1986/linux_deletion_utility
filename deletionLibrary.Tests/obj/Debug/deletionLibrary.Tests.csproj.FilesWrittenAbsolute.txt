@@ -1,0 +1,6 @@
+/home/william/Workspace/GitHub/LinuxDeletionUtility/deletionLibrary.Tests/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/william/Workspace/GitHub/LinuxDeletionUtility/deletionLibrary.Tests/bin/Debug/deletionLibrary.Tests.dll.mdb
+/home/william/Workspace/GitHub/LinuxDeletionUtility/deletionLibrary.Tests/bin/Debug/deletionLibrary.Tests.dll
+/home/william/Workspace/GitHub/LinuxDeletionUtility/deletionLibrary.Tests/obj/Debug/deletionLibrary.Tests.dll
+/home/william/Workspace/GitHub/LinuxDeletionUtility/deletionLibrary.Tests/obj/Debug/deletionLibrary.Tests.dll.mdb
+/home/william/Workspace/GitHub/LinuxDeletionUtility/deletionLibrary.Tests/bin/Debug/nunit.framework.dll
