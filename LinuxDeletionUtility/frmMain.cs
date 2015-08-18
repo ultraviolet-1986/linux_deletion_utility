@@ -5,9 +5,9 @@ using LinuxDeletionUtility;
 
 public partial class frmMain: Gtk.Window
 {
-	// #############################################################################
+	// #########################################################################
 	// MAIN FORM FUNCTIONS
-	// #############################################################################
+	// #########################################################################
 
 	#region mainFormFunctions
 
@@ -25,9 +25,9 @@ public partial class frmMain: Gtk.Window
 
 	#endregion
 
-	// #############################################################################
+	// #########################################################################
 	// ADDITIONAL FORM FUNCTIONS
-	// #############################################################################
+	// #########################################################################
 
 	#region additionalFormFunctions
 
@@ -57,25 +57,29 @@ public partial class frmMain: Gtk.Window
 
 		txtConsole.Buffer.Clear ();
 
-		if (chkMostRecentlyUsed.Active == true) {
+		if (chkMostRecentlyUsed.Active == true)
+		{
 			txtConsole.Buffer.InsertAtCursor ("Now cleaning Most Recently Used list...\n");
 			deletionLibrary.cleanMostRecentlyUsed ();
 			txtConsole.Buffer.InsertAtCursor ("Most Recently Used list is now clean.\n\n");
 		}
 
-		if (chkCommandLineHistory.Active == true) {
+		if (chkCommandLineHistory.Active == true)
+		{
 			txtConsole.Buffer.InsertAtCursor ("Now cleaning Command Line history...\n");
 			deletionLibrary.cleanCommandLineHistory ();
 			txtConsole.Buffer.InsertAtCursor ("Command Line history is now clean.\n\n");
 		}
 
-		if (chkWastebasket.Active == true) {
+		if (chkWastebasket.Active == true)
+		{
 			txtConsole.Buffer.InsertAtCursor ("Now cleaning Wastebasket / Trash contents...\n");
 			deletionLibrary.cleanWastebasket ();
 			txtConsole.Buffer.InsertAtCursor ("Wastebasket / Trash is now clean.\n\n");
 		}
 
-		if (chkImageThumbnails.Active == true) {
+		if (chkImageThumbnails.Active == true)
+		{
 			txtConsole.Buffer.InsertAtCursor ("Now cleaning Image Thumbnail cache...\n");
 			deletionLibrary.cleanImageThumbnails ();
 			txtConsole.Buffer.InsertAtCursor ("Image Thumbnail cache is now clean.\n\n");
@@ -86,9 +90,9 @@ public partial class frmMain: Gtk.Window
 
 	#endregion
 
-	// #############################################################################
+	// #########################################################################
 	// CLICK EVENTS
-	// #############################################################################
+	// #########################################################################
 
 	#region clickEvents
 
@@ -117,10 +121,13 @@ public partial class frmMain: Gtk.Window
 		if (chkMostRecentlyUsed.Active == false &&
 		    chkCommandLineHistory.Active == false &&
 		    chkWastebasket.Active == false &&
-		    chkImageThumbnails.Active == false) {
+		    chkImageThumbnails.Active == false)
+		{
 			txtConsole.Buffer.Clear ();
 			txtConsole.Buffer.InsertAtCursor ("You have not selected any items to delete.");
-		} else {
+		}
+		else
+		{
 			performTask ();
 		}
 	}
@@ -131,4 +138,5 @@ public partial class frmMain: Gtk.Window
 	}
 
 	#endregion
+
 }
