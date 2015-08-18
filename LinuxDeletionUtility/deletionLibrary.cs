@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace LinuxDeletionUtility
 {
@@ -13,10 +14,12 @@ namespace LinuxDeletionUtility
 		#region mainDeletionVariables
 
 		// WARNING: ALTERING THESE VALUES WILL DAMAGE YOUR SYSTEM
-		const string RECENT = @".local/share/recently-used.xbel";
+		const string RECENT_GTK = @".local/share/recently-used.xbel";
+		const string RECENT_QT = @".kde/share/apps/RecentDocuments";
 		const string TERM = ".bash_history";
 		const string TRASH = @".local/share/Trash";
-		const string THUMBS = @".cache/thumbnails";
+		const string THUMBS_GTK = @".cache/thumbnails";
+		const string THUMBS_QT = @".thumbnails";
 
 		#endregion
 
@@ -36,11 +39,13 @@ namespace LinuxDeletionUtility
 		{
 			DirectoryInfo deletionTarget = new DirectoryInfo (path);
 
-			foreach (FileInfo file in deletionTarget.GetFiles()) {
+			foreach (FileInfo file in deletionTarget.GetFiles())
+			{
 				file.Delete (); 
 			}
 
-			foreach (DirectoryInfo directory in deletionTarget.GetDirectories()) {
+			foreach (DirectoryInfo directory in deletionTarget.GetDirectories())
+			{
 				directory.Delete (true); 
 			}
 		}
@@ -56,7 +61,21 @@ namespace LinuxDeletionUtility
 		public static void cleanMostRecentlyUsed ()
 		{
 			goHome ();
-			File.WriteAllText (RECENT, string.Empty);
+
+			// USING GNOME OR COMPATIBLE DESKTOP
+			if (File.Exists(RECENT_GTK))
+			{
+				File.WriteAllText (RECENT_GTK, string.Empty);
+			}
+
+			// USING KDE OR COMPATIBLE DESKTOP
+			if (Directory.Exists(RECENT_QT))
+			{
+				if (Directory.GetFiles(RECENT_QT).Length > 0)
+				{
+					deleteFiles(RECENT_QT);
+				}
+			}
 		}
 
 		public static void cleanCommandLineHistory ()
@@ -68,13 +87,34 @@ namespace LinuxDeletionUtility
 		public static void cleanWastebasket ()
 		{
 			goHome ();
-			deleteFiles (TRASH);
+
+			if (Directory.GetFiles (TRASH).Length > 0)
+			{
+				deleteFiles (TRASH);
+			}
 		}
 
 		public static void cleanImageThumbnails ()
 		{
 			goHome ();
-			deleteFiles (THUMBS);
+
+			// USING GNOME OR COMPATIBLE DESKTOP
+			if (Directory.Exists (THUMBS_GTK))
+			{
+				if (Directory.GetFiles (THUMBS_GTK).Length > 0)
+				{
+					deleteFiles (THUMBS_GTK);
+				}
+			}
+
+			// USING KDE OR COMPATIBLE DESKTOP
+			if (Directory.Exists (THUMBS_QT))
+			{
+				if (Directory.GetDirectories(THUMBS_QT).Length > 0)
+				{
+					deleteFiles(THUMBS_QT);
+				}
+			}
 		}
 
 		#endregion

@@ -3,16 +3,9 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="LinuxDeletionUtility/deletionLibrary.cs">
     <Files>
       <File FileName="LinuxDeletionUtility/frmMain.cs" Line="1" Column="1" />
-      <File FileName="LinuxDeletionUtility/deletionLibrary.cs" Line="1" Column="1" />
+      <File FileName="LinuxDeletionUtility/deletionLibrary.cs" Line="77" Column="25" />
       <File FileName="deletionLibrary.Tests/deletionLibraryTest.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State name="__root__">
-          <Node name="LinuxDeletionUtility" expanded="True" selected="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
