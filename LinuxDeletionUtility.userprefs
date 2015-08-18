@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="LinuxDeletionUtility/LinuxDeletionUtility.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LinuxDeletionUtility/deletionLibrary.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinuxDeletionUtility/frmMain.cs">
     <Files>
-      <File FileName="LinuxDeletionUtility/frmMain.cs" Line="61" Column="3" />
-      <File FileName="LinuxDeletionUtility/deletionLibrary.cs" Line="151" Column="17" />
-      <File FileName="deletionLibrary.Tests/deletionLibraryTest.cs" Line="49" Column="55" />
+      <File FileName="LinuxDeletionUtility/frmMain.cs" Line="14" Column="37" />
+      <File FileName="LinuxDeletionUtility/deletionLibrary.cs" Line="11" Column="48" />
+      <File FileName="deletionLibrary.Tests/deletionLibraryTest.cs" Line="112" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
