@@ -72,13 +72,13 @@ public partial class frmMain: Gtk.Window
 		if (chkWastebasket.Active == true) {
 			txtConsole.Buffer.InsertAtCursor ("Now cleaning Wastebasket / Trash contents...\n");
 			deletionLibrary.cleanWastebasket ();
-			txtConsole.Buffer.InsertAtCursor ("Wastebasket / Trash is now cleaned.\n\n");
+			txtConsole.Buffer.InsertAtCursor ("Wastebasket / Trash is now clean.\n\n");
 		}
 
 		if (chkImageThumbnails.Active == true) {
 			txtConsole.Buffer.InsertAtCursor ("Now cleaning Image Thumbnail cache...\n");
 			deletionLibrary.cleanImageThumbnails ();
-			txtConsole.Buffer.InsertAtCursor ("Image Thumbnail cache is now cleaned.\n\n");
+			txtConsole.Buffer.InsertAtCursor ("Image Thumbnail cache is now clean.\n\n");
 		}
 
 		checkboxEnabled (true);
