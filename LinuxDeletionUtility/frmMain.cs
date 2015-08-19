@@ -1,13 +1,13 @@
-﻿using System;
-using Gdk;
+﻿using Gdk;
 using Gtk;
 using LinuxDeletionUtility;
+using System;
 
 public partial class frmMain: Gtk.Window
 {
-	// #####################################################################
+	// #########################################################################
 	// MAIN FORM VARIABLES
-	// #####################################################################
+	// #########################################################################
 
 	#region mainFormVariables
 

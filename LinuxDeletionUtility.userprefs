@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="LinuxDeletionUtility/frmMain.cs">
     <Files>
-      <File FileName="LinuxDeletionUtility/frmMain.cs" Line="34" Column="51" />
-      <File FileName="LinuxDeletionUtility/deletionLibrary.cs" Line="18" Column="3" />
+      <File FileName="LinuxDeletionUtility/frmMain.cs" Line="10" Column="78" />
+      <File FileName="LinuxDeletionUtility/deletionLibrary.cs" Line="1" Column="1" />
       <File FileName="deletionLibrary.Tests/deletionLibraryTest.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

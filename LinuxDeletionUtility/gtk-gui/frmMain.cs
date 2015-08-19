@@ -72,7 +72,7 @@ public partial class frmMain
 		this.Name = "frmMain";
 		this.Title = global::Mono.Unix.Catalog.GetString ("Linux Deletion Utility");
 		this.Icon = global::Stetic.IconLoader.LoadIcon (this, "gtk-execute", global::Gtk.IconSize.Menu);
-		this.WindowPosition = ((global::Gtk.WindowPosition)(4));
+		this.WindowPosition = ((global::Gtk.WindowPosition)(1));
 		this.DefaultWidth = 600;
 		this.DefaultHeight = 400;
 		// Container child frmMain.Gtk.Container+ContainerChild
