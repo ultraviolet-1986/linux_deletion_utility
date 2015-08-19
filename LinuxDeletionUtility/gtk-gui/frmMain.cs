@@ -100,6 +100,7 @@ public partial class frmMain
 		this.noteMain.CanFocus = true;
 		this.noteMain.Name = "noteMain";
 		this.noteMain.CurrentPage = 0;
+		this.noteMain.ShowBorder = false;
 		// Container child noteMain.Gtk.Notebook+NotebookChild
 		this.vboxPageHome = new global::Gtk.VBox ();
 		this.vboxPageHome.Name = "vboxPageHome";

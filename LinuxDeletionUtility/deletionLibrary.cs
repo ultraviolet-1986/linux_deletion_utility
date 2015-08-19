@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 
 namespace LinuxDeletionUtility
@@ -23,12 +22,12 @@ namespace LinuxDeletionUtility
 		#region mainDeletionVariables
 
 		// WARNING: ALTERING THESE VALUES WILL DAMAGE YOUR SYSTEM
-		const string RECENT_GTK = @".local/share/recently-used.xbel";
-		const string RECENT_QT = @".kde/share/apps/RecentDocuments";
-		const string TERM = ".bash_history";
-		const string TRASH = @".local/share/Trash";
-		const string THUMBS_GTK = @".cache/thumbnails";
-		const string THUMBS_QT = @".thumbnails";
+		public const string RECENT_GTK = @".local/share/recently-used.xbel";
+		public const string RECENT_QT = @".kde/share/apps/RecentDocuments";
+		public const string TERM = ".bash_history";
+		public const string TRASH = @".local/share/Trash";
+		public const string THUMBS_GTK = @".cache/thumbnails";
+		public const string THUMBS_QT = @".thumbnails";
 
 		#endregion
 

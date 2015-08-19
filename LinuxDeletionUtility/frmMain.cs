@@ -5,6 +5,17 @@ using LinuxDeletionUtility;
 
 public partial class frmMain: Gtk.Window
 {
+	// #####################################################################
+	// MAIN FORM VARIABLES
+	// #####################################################################
+
+	#region mainFormVariables
+
+	// THIS VARIABLE WILL ALWAYS CONTAIN THE NAME OF THE USER'S DESKTOP PARADIGM
+	readonly string desktop = Environment.GetEnvironmentVariable ("DESKTOP_SESSION");
+
+	#endregion
+
 	// #########################################################################
 	// MAIN FORM FUNCTIONS
 	// #########################################################################
@@ -15,6 +26,12 @@ public partial class frmMain: Gtk.Window
 	{
 		Build ();
 		resetApplication ();
+		currentDesktop (desktop);
+	}
+
+	public void currentDesktop(string d)
+	{
+		Title = Title + " (" + d.ToUpper() + " Desktop)";
 	}
 
 	protected void OnDeleteEvent (object sender, DeleteEventArgs a)
