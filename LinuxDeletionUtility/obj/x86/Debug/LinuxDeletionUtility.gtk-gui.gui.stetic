@@ -12,7 +12,7 @@
     <action-group name="Default">
       <action id="HelpAction">
         <property name="Type">Action</property>
-        <property name="Label" translatable="yes">Help</property>
+        <property name="Label" translatable="yes">_Help</property>
         <property name="ShortLabel" translatable="yes">_Help</property>
       </action>
       <action id="dialogInfoAction">
@@ -210,8 +210,8 @@
                     <property name="Overwrite">True</property>
                     <property name="Text" translatable="yes" />
                     <property name="WrapMode">Word</property>
-                    <property name="LeftMargin">2</property>
-                    <property name="RightMargin">2</property>
+                    <property name="LeftMargin">4</property>
+                    <property name="RightMargin">4</property>
                   </widget>
                 </child>
               </widget>

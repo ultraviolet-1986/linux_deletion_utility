@@ -55,7 +55,7 @@ public partial class frmMain
 		// Widget frmMain
 		this.UIManager = new global::Gtk.UIManager ();
 		global::Gtk.ActionGroup w1 = new global::Gtk.ActionGroup ("Default");
-		this.HelpAction = new global::Gtk.Action ("HelpAction", global::Mono.Unix.Catalog.GetString ("Help"), null, null);
+		this.HelpAction = new global::Gtk.Action ("HelpAction", global::Mono.Unix.Catalog.GetString ("_Help"), null, null);
 		this.HelpAction.ShortLabel = global::Mono.Unix.Catalog.GetString ("_Help");
 		w1.Add (this.HelpAction, null);
 		this.dialogInfoAction = new global::Gtk.Action ("dialogInfoAction", global::Mono.Unix.Catalog.GetString ("_About"), null, "gtk-dialog-info");
@@ -196,8 +196,8 @@ public partial class frmMain
 		this.txtConsole.CursorVisible = false;
 		this.txtConsole.Overwrite = true;
 		this.txtConsole.WrapMode = ((global::Gtk.WrapMode)(2));
-		this.txtConsole.LeftMargin = 2;
-		this.txtConsole.RightMargin = 2;
+		this.txtConsole.LeftMargin = 4;
+		this.txtConsole.RightMargin = 4;
 		this.GtkScrolledWindow.Add (this.txtConsole);
 		this.hboxBody.Add (this.GtkScrolledWindow);
 		global::Gtk.Box.BoxChild w12 = ((global::Gtk.Box.BoxChild)(this.hboxBody [this.GtkScrolledWindow]));
