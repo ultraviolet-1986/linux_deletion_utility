@@ -12,7 +12,7 @@ public partial class frmMain: Gtk.Window
 	#region mainFormVariables
 
 	// THIS VARIABLE WILL ALWAYS CONTAIN THE NAME OF THE USER'S DESKTOP PARADIGM
-	readonly string desktop = Environment.GetEnvironmentVariable ("DESKTOP_SESSION");
+	readonly string desktopName = Environment.GetEnvironmentVariable ("DESKTOP_SESSION");
 
 	#endregion
 
@@ -26,10 +26,10 @@ public partial class frmMain: Gtk.Window
 	{
 		Build ();
 		resetApplication ();
-		currentDesktop (desktop);
+		appendToFormTitle (desktopName);
 	}
 
-	public void currentDesktop(string d)
+	public void appendToFormTitle (string d)
 	{
 		Title = Title + " (" + d.ToUpper() + " Desktop)";
 	}
@@ -48,16 +48,15 @@ public partial class frmMain: Gtk.Window
 
 	#region additionalFormFunctions
 
-	public void checkboxEnabled (bool state)
-	{
-		chkMostRecentlyUsed.Sensitive = state;
-		chkCommandLineHistory.Sensitive = state;
-		chkWastebasket.Sensitive = state;
-		chkImageThumbnails.Sensitive = state;
-	}
-
 	public void resetApplication ()
 	{
+		/// <summary>
+		/// This method contains all of the defaults which should be loaded when
+		/// the application is launched. These values should all be 'cleared',
+		/// this means that the application can be configured from scratch each
+		/// time it is started.
+		/// </summary>
+
 		noteMain.CurrentPage = 0;
 
 		txtConsole.Buffer.Clear ();
@@ -68,8 +67,29 @@ public partial class frmMain: Gtk.Window
 		chkImageThumbnails.Active = false;
 	}
 
+	public void checkboxEnabled (bool state)
+	{
+		/// <summary>
+		/// This method contains the 'state' of the application's checkboxes, a
+		/// parameter called 'state' can be passed to determine whether or not
+		/// all of the checkboxes are active - this should be set to 'false'
+		/// during the execution of tasks, they can be re-enabled once the tasks
+		/// are complete by passing the parameter 'true'.
+		/// </summary>
+
+		chkMostRecentlyUsed.Sensitive = state;
+		chkCommandLineHistory.Sensitive = state;
+		chkWastebasket.Sensitive = state;
+		chkImageThumbnails.Sensitive = state;
+	}
+
 	public void performTask ()
 	{
+		/// <summary>
+		/// This method checks the state of all of the checkboxes and performs
+		/// the 'clean' operation depending on boxes which are 'checked'.
+		/// </summary>
+
 		checkboxEnabled (false);
 
 		txtConsole.Buffer.Clear ();
@@ -113,7 +133,8 @@ public partial class frmMain: Gtk.Window
 
 	#region clickEvents
 
-	// MENU ITEM CLICK EVENTS
+	// MENU STRIP CLICK EVENTS -------------------------------------------------
+
 	protected void menuExit_Click (object sender, EventArgs e)
 	{
 		Application.Quit ();
@@ -121,6 +142,14 @@ public partial class frmMain: Gtk.Window
 
 	public void menuAbout_Click (object sender, EventArgs e)
 	{
+		/// <summary>
+		/// This method contains the 'About' screen, it contains the details of
+		/// the application's name, that of the author, version number, website,
+		/// etc... At this time, this item does not have its own icon and the
+		/// code related to this below has been commented out for the time
+		/// being.
+		/// </summary>
+
 		AboutDialog about = new AboutDialog ();
 		about.ProgramName = "Linux Deletion Utility";
 		about.Version = "0.1";
@@ -132,9 +161,17 @@ public partial class frmMain: Gtk.Window
 		about.Destroy ();
 	}
 
-	// BUTTON CLICK EVENTS
+	// BUTTON CLICK EVENTS -----------------------------------------------------
+
 	protected void btnClean_Click (object sender, EventArgs e)
 	{
+		/// <summary>
+		/// This method contains the checks required to perform the cleaning
+		/// task. Though cumbersome, the statement below is required to ensure
+		/// that the user has chosen at least one option before the application
+		/// will commence the cleaning operation.
+		/// </summary>
+
 		if (chkMostRecentlyUsed.Active == false &&
 		    chkCommandLineHistory.Active == false &&
 		    chkWastebasket.Active == false &&
