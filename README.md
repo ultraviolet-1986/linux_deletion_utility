@@ -29,3 +29,5 @@ A simple utility for deleting unnecessary files in a user's Home folder.
 	- Included some basic KDE support.
 	- Have reformatted the source code for easier reading.
 	- Some XML documentation has been included within the 'deletionLibrary'.
+- **19/08/2015**
+	- Have included detection for the user's Desktop Environment to be displayed inside the application's window title.
